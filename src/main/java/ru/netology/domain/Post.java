@@ -15,6 +15,18 @@ public class Post {
     private LikesInfo likesInfo;        //инфо о лайках
     private RepostsInfo repostsInfo;    //инфо о репостах
     private int views;                  //количество просмотров
+    private int ownerId;                //идентификатор владельца стены
+    private int fromId;                 //идентификатор автора записи
+    private int createdById;            //идентификатор администратора, который опубликовал запись
+    private int replyOwnerId;           //идентификатор владельца записи, в ответ на которую была оставлена текущая
+    private int replyPostId;            //идентификатор записи, в ответ на которую была оставлена текущая
+    private int friendsOnly;            //если запись была создана с опцией «Только для друзей»
+    private String postType;            //тип записи
+    private int signerId;               //идентификатор автора, если запись была опубликована от имени сообщества и подписана пользователем
+    private int postponedId;            //идентификатор отложенной записи. Это поле возвращается тогда, когда запись стояла на таймере
+    private CopyrightInfo copyrightInfo;//инфо об источнике материала
+    private GeoInfo geoInfo;            //инфо о геолокации
+    private DonutInfo donutInfo;        //инфо о записи VK Donut
 
 
     public int getId() {
@@ -127,5 +139,101 @@ public class Post {
 
     public void setViews(int views) {
         this.views = views;
+    }
+
+    public int getOwnerId() {
+        return ownerId;
+    }
+
+    public void setOwnerId(int ownerId) {
+        this.ownerId = ownerId;
+    }
+
+    public int getFromId() {
+        return fromId;
+    }
+
+    public void setFromId(int fromId) {
+        this.fromId = fromId;
+    }
+
+    public int getCreatedById() {
+        return createdById;
+    }
+
+    public void setCreatedById(int createdById) {
+        this.createdById = createdById;
+    }
+
+    public int getReplyOwnerId() {
+        return replyOwnerId;
+    }
+
+    public void setReplyOwnerId(int replyOwnerId) {
+        this.replyOwnerId = replyOwnerId;
+    }
+
+    public int getReplyPostId() {
+        return replyPostId;
+    }
+
+    public void setReplyPostId(int replyPostId) {
+        this.replyPostId = replyPostId;
+    }
+
+    public int getFriendsOnly() {
+        return friendsOnly;
+    }
+
+    public void setFriendsOnly(int friendsOnly) {
+        this.friendsOnly = friendsOnly;
+    }
+
+    public String getPostType() {
+        return postType;
+    }
+
+    public void setPostType(String postType) {
+        this.postType = postType;
+    }
+
+    public int getSignerId() {
+        return signerId;
+    }
+
+    public void setSignerId(int signerId) {
+        this.signerId = signerId;
+    }
+
+    public int getPostponedId() {
+        return postponedId;
+    }
+
+    public void setPostponedId(int postponedId) {
+        this.postponedId = postponedId;
+    }
+
+    public CopyrightInfo getCopyrightInfo() {
+        return copyrightInfo;
+    }
+
+    public void setCopyrightInfo(CopyrightInfo copyrightInfo) {
+        this.copyrightInfo = copyrightInfo;
+    }
+
+    public GeoInfo getGeoInfo() {
+        return geoInfo;
+    }
+
+    public void setGeoInfo(GeoInfo geoInfo) {
+        this.geoInfo = geoInfo;
+    }
+
+    public DonutInfo getDonutInfo() {
+        return donutInfo;
+    }
+
+    public void setDonutInfo(DonutInfo donutInfo) {
+        this.donutInfo = donutInfo;
     }
 }
